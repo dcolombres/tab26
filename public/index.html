@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tablero DevOps</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="top">
+    <div>
+      <p class="mark">tab26</p>
+      <h1>Peticiones DevOps</h1>
+      <p class="who" id="who">Conectando con Redmine…</p>
+    </div>
+    <div class="tools">
+      <label class="search">
+        <span>Buscar</span>
+        <input id="search" type="search" placeholder="Asunto, número o persona" autocomplete="off">
+      </label>
+      <div class="scopes" role="group" aria-label="Alcance">
+        <button type="button" id="scope-open" class="on" aria-pressed="true">Abiertas</button>
+        <button type="button" id="scope-all" aria-pressed="false">Todas</button>
+      </div>
+      <button type="button" id="reload">Actualizar</button>
+    </div>
+  </header>
+  <p class="hint">Arrastrá una petición a otra columna, o usá el botón. El cambio se guarda en Redmine y puede avisar a quienes siguen la petición. Dentro de cada columna el orden es por última actualización.</p>
+  <p class="banner" id="banner" role="status" hidden></p>
+  <main class="board" id="board" aria-live="polite"></main>
+  <script src="/app.js"></script>
+</body>
+</html>
